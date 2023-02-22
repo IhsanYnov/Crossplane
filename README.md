@@ -27,3 +27,7 @@ echo \
 helm repo add crossplane-stable https://charts.crossplane.io/stable
 helm install crossplane --namespace crossplane-system crossplane-stable/crossplane --version 1.4.0
 minikube kubectl -- get pods --namespace crossplane-system
+
+kubectl apply -f mycustomresource-crd.yaml
+kubectl get crd
+
